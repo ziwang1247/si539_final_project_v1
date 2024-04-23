@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&family=Ramabhadra&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Raleway:wght@400;800&display=swap');
+
+
+#skip-to-main-content {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip-to-main-content:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
+/* Smooth scrolling IF user doesn't have a preference due to motion sensitivities */
+@media screen and (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@font-face {
+    font-family: "domaine";
+    src: url("font/domaine-display-test-regular.woff") format("woff");
+}
+
+body {
+    background-color: #101010;
+    ;
+    margin: 0;
+    height: auto;
+    max-height: 190vh;
+}
+
+h1 {
+    position: absolute;
+    left: 252px;
+    top: 256px;
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 82px;
+    color: #FFFFFF;
+}
+
+.zi {
+
+    font-weight: 800;
+}
+
+.logo {
+    position: fixed;
+    width: 40px;
+    left: 70px;
+    top: 40px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    z-index: 8;
+}
+
+h2 {
+    position: absolute;
+    left: 675px;
+    top: 450px;
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 48px;
+    color: #FFFFFF;
+
+}
+
+.about {
+    position: fixed;
+    width: 85px;
+    height: 41px;
+    right: 70px;
+    top: 40px;
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 41px;
+    color: #FFFFFF;
+    z-index: 7;
+}
+
+.arrow {
+    position: fixed;
+    width: 20px;
+    left: 160px;
+    bottom: 65px;
+    display: none;
+}
+
+h3 {
+    position: fixed;
+    width: 156px;
+    height: 33px;
+    left: 85px;
+    bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 41px;
+    color: #FFFFFF;
+    display: none;
+}
+
+.back-image {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    opacity: 0.2;
+}
+
+.image-box {
+    position: absolute;
+    background-position: center;
+    background: #000;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+    background: transparent;
+    z-index: -1;
+    transition-duration: 2s;
+}
+
+.back {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 1;
+    transition-duration: 0.2s;
+    /* transition-delay: 2s; */
+}
+
+
+.description {
+    position: absolute;
+    top: 160%;
+    left: 55%;
+    width: 400px;
+    font-size: 12px;
+    font-family: 'Raleway', serif;
+    color: white;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    cursor: pointer;
+    opacity: 0;
+}
+
+#main-container {
+    position: absolute;
+    top: 100%;
+    left: 3%;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+h4 {
+    position: relative;
+    padding-bottom: 0px;
+    left: 3%;
+    text-align: left;
+    width: 500px;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 800;
+    line-height: auto;
+    cursor: pointer;
+    z-index: 1;
+}
+
+h4:hover {
+    color: #c77fda;
+}
+
+
+#wa-container,
+#vga-container,
+#typo-container {
+    position: relative;
+    top: 220%;
+    display: flex;
+    flex-wrap: wrap;
+    left: 2vw;
+
+}
+
+#wa-container div,
+#vga-container div,
+#typo-container div {
+    width: 500px;
+    height: auto;
+    color: white;
+    font-family: 'Raleway', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+}
+
+
+
+#wa-container div img,
+#vga-container div img,
+#typo-container div img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+#wa-container div img:hover,
+#vga-container div img:hover,
+#typo-container div img:hover {
+    width: 510px;
+    transition-duration: 0.2s;
+}
+
+#all-project-container {
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    transition-duration: 0.2s;
+    height: 90%;
+    overflow: auto;
+    z-index: 6;
+
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-align: right;
+    font-size: 2vh;
+    line-height: 30px;
+    font-weight: 400;
+    color: #ffffff;
+    transition-duration: 0.4s;
+    z-index: 2;
+}
+
+a:hover {
+    border: 2px solid #8a5fb3;
+}
+
+ul {
+    padding: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+li {
+    position: relative;
+    align-items: flex-end;
+    list-style-type: none;
+    margin-right: 40px;
+    text-align: right;
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    z-index: 2;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+p {
+    font-family: 'Raleway', serif;
+    font-size: 2.5vh;
+    letter-spacing: 1px;
+    line-height: 70%;
+    color: #b4b5b2;
+    text-align: right;
+    margin-right: 40px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#uiux {
+    margin-top: 18vw;
+}
+
+#typography-name,
+#website-name,
+#uiux-name,
+#core-2-studio-name,
+#core-2-lab-name,
+#core-1-studio-project-name,
+#more-name {
+    margin-bottom: 10px;
+    z-index: 5;
+}
+
+#typography-project-container,
+#website-project-container,
+#uiux-project-container,
+#core-2-studio-project-container,
+#core-2-lab-project-container,
+#core-1-studio-project-container {
+    display: none;
+    z-index: 5;
+}
+
+
+
+#typography-project-container.open {
+    display: inline;
+    z-index: 5;
+}
+
+#website-project-container.open {
+    display: inline;
+    z-index: 5;
+}
+
+#uiux-project-container.open {
+    display: inline;
+    z-index: 5;
+}
+
+#core-2-studio-project-container.open {
+    display: inline;
+    z-index: 5;
+}
+
+#core-2-lab-project-container.open {
+    display: inline;
+    z-index: 5;
+}
+
+#core-1-studio-project-container.open {
+    display: inline;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+#core-1-studio-project-container {
+    width: auto;
+    height: 500px;
+    margin-bottom: 20%;
+
+}
+
+#wa-name,
+#vga-name,
+#typo-name,
+#webex-name {
+    margin-bottom: 10px;
+}
+
+#wa-container,
+#vga-container,
+#typo-container,
+#webex-container {
+    display: none;
+}
+
+#wa-container.open {
+    display: flex;
+    z-index: 2;
+}
+
+#vga-container.open {
+    display: flex;
+    z-index: 2;
+}
+
+#typo-container.open {
+    display: flex;
+    z-index: 2;
+}
+
+#webex-container.open {
+    display: inline;
+    z-index: 2;
+}
+
+#webex-container a {
+    position: relative;
+    left: 3%;
+}
+
+
+
+
+.upwards-arrow {
+    display: none;
+    position: absolute;
+    padding-top: 0px;
+    margin-top: -13px;
+    z-index: 2;
+}
+
+p:hover {
+    color: #c77fda;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, rgba(255, 242, 175, 0) 100%);
+    opacity: .4;
+    animation-name: twinkle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    z-index: -1;
+    /* display: none; */
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: .4;
+    }
+
+    50% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: .4;
+    }
+}
+
+li a.active {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.image {
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    z-index: 100;
+    visibility: hidden;
+    transform: scale(0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+
+}
+
+.image.active {
+    visibility: visible;
+    transform: scale(1);
+    opacity: 0.8;
+}
+
+.image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+
+footer {
+    font-family: 'Raleway', serif;
+    font-size: 2vh;
+    color: #ffffff;
+    position: fixed;
+    bottom: 50px;
+    right: 70px;
+
+}
